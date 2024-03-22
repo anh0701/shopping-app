@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             width: 200,
             margin: EdgeInsets.only(bottom: 0),
-            child: froyoFlatBtn('Sign In', () {
+            child:   FlatBtn('Sign In', () {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             width: 200,
             padding: EdgeInsets.all(0),
-            child: froyoOutlineBtn('Sign Up', () {
+            child:   OutlineBtn('Sign Up', () {
               Navigator.pushReplacement(
                   context,
                   PageTransition(

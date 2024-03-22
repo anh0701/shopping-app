@@ -15,11 +15,11 @@ Widget foodItem(Product food,
         Container(
             width: 180,
             height: 180,
-            child: RaisedButton(
-                color: white,
-                elevation: (isProductPage) ? 20 : 12,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)),
+            child: ElevatedButton(
+                // color: white,
+                // elevation: (isProductPage) ? 20 : 12,
+                // shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(5)),
                 onPressed: onTapped,
                 child: Hero(
                     transitionOnUserGestures: true,
@@ -29,9 +29,9 @@ Widget foodItem(Product food,
         Positioned(
           bottom: (isProductPage) ? 10 : 70,
           right: 0,
-          child: FlatButton(
-            padding: EdgeInsets.all(20),
-            shape: CircleBorder(),
+          child: TextButton(
+            // padding: EdgeInsets.all(20),
+            // shape: CircleBorder(),
             onPressed: onLike,
             child: Icon(
               (food.userLiked) ? Icons.favorite : Icons.favorite_border,

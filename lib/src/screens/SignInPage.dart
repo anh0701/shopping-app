@@ -26,7 +26,7 @@ class _SignInPageState extends State<SignInPage> {
               style: TextStyle(
                   color: Colors.grey, fontFamily: 'Poppins', fontSize: 15)),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               onPressed: () {
                 // Navigator.of(context).pushReplacementNamed('/signup');
                 Navigator.pushReplacement(
@@ -56,7 +56,7 @@ class _SignInPageState extends State<SignInPage> {
                       Text('Howdy, let\'s authenticate', style: taglineText),
                       fryoTextInput('Username'),
                       fryoPasswordInput('Password'),
-                      FlatButton(
+                      TextButton(
                         onPressed: () {},
                         child:
                             Text('Forgot Password?', style: contrastTextBold),
@@ -66,7 +66,7 @@ class _SignInPageState extends State<SignInPage> {
                   Positioned(
                     bottom: 15,
                     right: -15,
-                    child: FlatButton(
+                    child: TextButton(
                       onPressed: () {
                         Navigator.pushReplacement(
                             context,
@@ -76,10 +76,13 @@ class _SignInPageState extends State<SignInPage> {
                                   pageTitle: '',
                                 )));
                       },
-                      color: primaryColor,
-                      padding: EdgeInsets.all(13),
-                      shape: CircleBorder(),
-                      child: Icon(Icons.arrow_forward, color: white),
+                      // color: primaryColor,
+                      // padding: EdgeInsets.all(13),
+                      // shape: CircleBorder(),
+                      child: Padding(
+                        padding: const EdgeInsets.all(13),
+                        child: Icon(Icons.arrow_forward, color: white),
+                      ),
                     ),
                   )
                 ],

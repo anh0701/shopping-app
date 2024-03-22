@@ -4,7 +4,8 @@ import '../shared/styles.dart';
 import '../shared/colors.dart';
 import '../shared/partials.dart';
 import '../shared/buttons.dart';
-import 'package:smooth_star_rating/smooth_star_rating.dart';
+// import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ProductPage extends StatefulWidget {
   final String pageTitle;
@@ -52,22 +53,42 @@ class _ProductPageState extends State<ProductPage> {
                           children: <Widget>[
                             Text(widget.productData.name, style: h5),
                             Text(widget.productData.price, style: h3),
-                            Container(
-                              margin: EdgeInsets.only(top: 5, bottom: 20),
-                              child: SmoothStarRating(
-                                allowHalfRating: false,
-                                onRated: (v) {
-                                  setState(() {
-                                    _rating = v;
-                                  });
-                                },
-                                starCount: 5,
-                                rating: _rating,
-                                size: 27.0,
-                                color: Colors.orange,
-                                borderColor: Colors.orange,
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                RatingBar.builder(
+                                  initialRating: 3,
+                                  minRating: 1,
+                                  direction: Axis.horizontal,
+                                  itemCount: 5,
+                                  itemPadding:
+                                      EdgeInsets.symmetric(horizontal: 4.0),
+                                  itemBuilder: (context, _) => Icon(
+                                    Icons.star,
+                                    color: Colors.green,
+                                  ),
+                                  onRatingUpdate: (rating) {
+                                    print(rating);
+                                  },
+                                ),
+                              ],
                             ),
+                            // Container(
+                            //   margin: EdgeInsets.only(top: 5, bottom: 20),
+                            //   child: SmoothStarRating(
+                            //     allowHalfRating: false,
+                            //     onRated: (v) {
+                            //       setState(() {
+                            //         _rating = v;
+                            //       });
+                            //     },
+                            //     starCount: 5,
+                            //     rating: _rating,
+                            //     size: 27.0,
+                            //     color: Colors.orange,
+                            //     borderColor: Colors.orange,
+                            //   ),
+                            // ),
                             Container(
                               margin: EdgeInsets.only(top: 10, bottom: 25),
                               child: Column(
@@ -119,11 +140,11 @@ class _ProductPageState extends State<ProductPage> {
                             ),
                             Container(
                               width: 180,
-                              child: froyoOutlineBtn('Buy Now', () {}),
+                              child:   OutlineBtn('Buy Now', () {}),
                             ),
                             Container(
                               width: 180,
-                              child: froyoFlatBtn('Add to Cart', () {}),
+                              child:   FlatBtn('Add to Cart', () {}),
                             )
                           ],
                         ),

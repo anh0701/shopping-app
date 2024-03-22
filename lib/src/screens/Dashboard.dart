@@ -262,7 +262,7 @@ Widget sectionHeader(String headerTitle, {onViewMore}) {
       ),
       Container(
         margin: EdgeInsets.only(left: 15, top: 2),
-        child: FlatButton(
+        child: TextButton(
           onPressed: onViewMore,
           child: Text('View all ›', style: contrastText),
         ),
