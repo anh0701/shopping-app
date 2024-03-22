@@ -5,7 +5,7 @@ import './styles.dart';
 Container TextInput(String hintText,
     {onTap, onChanged, onEditingComplete, onSubmitted}) {
   return Container(
-    margin: EdgeInsets.only(top: 13),
+    margin: const EdgeInsets.only(top: 13),
     child: TextField(
       onTap: onTap,
       onChanged: onChanged,
@@ -17,7 +17,7 @@ Container TextInput(String hintText,
           hintText: hintText,
           hintStyle: inputFieldHintTextStyle,
           focusedBorder: inputFieldFocusedBorderStyle,
-          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           border: inputFieldDefaultBorderStyle),
     ),
   );
@@ -26,7 +26,7 @@ Container TextInput(String hintText,
 Container EmailInput(String hintText,
     {onTap, onChanged, onEditingComplete, onSubmitted}) {
   return Container(
-    margin: EdgeInsets.only(top: 13),
+    margin: const EdgeInsets.only(top: 13),
     child: TextField(
       onTap: onTap,
       onChanged: onChanged,
@@ -39,7 +39,7 @@ Container EmailInput(String hintText,
           hintText: hintText,
           hintStyle: inputFieldHintTextStyle,
           focusedBorder: inputFieldFocusedBorderStyle,
-          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           border: inputFieldDefaultBorderStyle),
     ),
   );
@@ -49,7 +49,7 @@ Container EmailInput(String hintText,
 Container PasswordInput(String hintText,
     {onTap, onChanged, onEditingComplete, onSubmitted}) {
   return Container(
-    margin: EdgeInsets.only(top: 13),
+    margin: const EdgeInsets.only(top: 13),
     child: TextField(
       onTap: onTap,
       onChanged: onChanged,
@@ -62,7 +62,7 @@ Container PasswordInput(String hintText,
           hintText: hintText,
           hintStyle: inputFieldHintPaswordTextStyle,
           focusedBorder: inputFieldFocusedBorderStyle,
-          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           border: inputFieldDefaultBorderStyle),
     ),
   );

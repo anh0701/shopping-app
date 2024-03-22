@@ -9,10 +9,10 @@ Widget foodItem(Product food,
     width: 180,
     height: 180,
     // color: Colors.red,
-    margin: EdgeInsets.only(left: 20),
+    margin: const EdgeInsets.only(left: 20),
     child: Stack(
       children: <Widget>[
-        Container(
+        SizedBox(
             width: 180,
             height: 180,
             child: ElevatedButton(
@@ -52,7 +52,7 @@ Widget foodItem(Product food,
                     Text(food.price, style: priceText),
                   ],
                 )
-              : Text(' '),
+              : const Text(' '),
         ),
         Positioned(
             top: 10,
@@ -60,15 +60,15 @@ Widget foodItem(Product food,
             child: (food.discount != null)
                 ? Container(
                     padding:
-                        EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 5),
+                        const EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 5),
                     decoration: BoxDecoration(
                         color: Colors.grey[600],
                         borderRadius: BorderRadius.circular(50)),
                     child: Text('-' + food.discount.toString() + '%',
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w700)),
                   )
-                : SizedBox(width: 0))
+                : const SizedBox(width: 0))
       ],
     ),
   );

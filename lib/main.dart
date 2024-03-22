@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoppingapp/src/shared/Product.dart';
-import 'package:shoppingapp/src/shared/styles.dart';
 import './src/screens/SignInPage.dart';
 import './src/screens/SignUpPage.dart';
-import './src/screens/HomePage.dart';
 import './src/screens/Dashboard.dart';
 import './src/screens/ProductPage.dart';
 

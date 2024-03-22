@@ -10,7 +10,7 @@ import './SignInPage.dart';
 class HomePage extends StatefulWidget {
   final String pageTitle;
 
-  HomePage({Key? key, required this.pageTitle}) : super(key: key);
+  const HomePage({Key? key, required this.pageTitle}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -27,18 +27,18 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Image.asset('lib/images/welcome.png', width: 190, height: 190),
           Container(
-            margin: EdgeInsets.only(bottom: 10, top: 0),
-            child: Text('Welcome!', style: logoStyle),
+            margin: const EdgeInsets.only(bottom: 10, top: 0),
+            child: const Text('Welcome!', style: logoStyle),
           ),
           Container(
             width: 200,
-            margin: EdgeInsets.only(bottom: 0),
+            margin: const EdgeInsets.only(bottom: 0),
             child:   FlatBtn('Sign In', () {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
                       type: PageTransitionType.rotate,
-                      duration: Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
                       child: SignInPage(
                         pageTitle: '',
                       )));
@@ -46,13 +46,13 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             width: 200,
-            padding: EdgeInsets.all(0),
+            padding: const EdgeInsets.all(0),
             child:   OutlineBtn('Sign Up', () {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
                       type: PageTransitionType.rotate,
-                      duration: Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
                       child: SignUpPage(
                         pageTitle: '',
                       )));
@@ -60,15 +60,15 @@ class _HomePageState extends State<HomePage> {
             }),
           ),
           Container(
-            margin: EdgeInsets.only(top: 25),
+            margin: const EdgeInsets.only(top: 25),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Text('Langauage:', style: TextStyle(color: darkText)),
+                const Text('Langauage:', style: TextStyle(color: darkText)),
                 Container(
-                  margin: EdgeInsets.only(left: 6),
-                  child: Text('English ›',
+                  margin: const EdgeInsets.only(left: 6),
+                  child: const Text('English ›',
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w500)),
                 )

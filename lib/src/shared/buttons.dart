@@ -7,7 +7,7 @@ TextButton FlatBtn(String text, onPressed) {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStyle(color: white),
+        style: const TextStyle(color: white),
       ));
   // return FlatButton(
   //   onPressed: onPressed,
@@ -23,7 +23,7 @@ OutlinedButton OutlineBtn(String text, onPressed) {
     onPressed: onPressed,
     child: Text(
       text,
-      style: TextStyle(color: primaryColor),
+      style: const TextStyle(color: primaryColor),
     ),
   );
 }

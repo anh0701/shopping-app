@@ -9,7 +9,7 @@ import './Dashboard.dart';
 class SignInPage extends StatefulWidget {
   final String pageTitle;
 
-  SignInPage({Key? key, required this.pageTitle}) : super(key: key);
+  const SignInPage({Key? key, required this.pageTitle}) : super(key: key);
 
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -22,7 +22,7 @@ class _SignInPageState extends State<SignInPage> {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: white,
-          title: Text('Sign In',
+          title: const Text('Sign In',
               style: TextStyle(
                   color: Colors.grey, fontFamily: 'Poppins', fontSize: 15)),
           actions: <Widget>[
@@ -33,11 +33,11 @@ class _SignInPageState extends State<SignInPage> {
                     context,
                     PageTransition(
                         type: PageTransitionType.rightToLeft,
-                        child: SignUpPage(
+                        child: const SignUpPage(
                           pageTitle: '',
                         )));
               },
-              child: Text('Sign Up', style: contrastText),
+              child: const Text('Sign Up', style: contrastText),
             )
           ],
         ),
@@ -45,21 +45,24 @@ class _SignInPageState extends State<SignInPage> {
           shrinkWrap: true,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(left: 18, right: 18),
+              padding: const EdgeInsets.only(left: 18, right: 18),
+              height: 245,
+              width: double.infinity,
+              decoration: authPlateDecoration,
               child: Stack(
                 children: <Widget>[
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('Welcome Back!', style: h3),
-                      Text('Howdy, let\'s authenticate', style: taglineText),
+                      const Text('Welcome Back!', style: h3),
+                      const Text('Howdy, let\'s authenticate', style: taglineText),
                       TextInput('Username'),
                       PasswordInput('Password'),
                       TextButton(
                         onPressed: () {},
                         child:
-                            Text('Forgot Password?', style: contrastTextBold),
+                            const Text('Forgot Password?', style: contrastTextBold),
                       )
                     ],
                   ),
@@ -72,24 +75,21 @@ class _SignInPageState extends State<SignInPage> {
                             context,
                             PageTransition(
                                 type: PageTransitionType.rightToLeft,
-                                child: Dashboard(
+                                child: const Dashboard(
                                   pageTitle: '',
                                 )));
                       },
                       // color: primaryColor,
                       // padding: EdgeInsets.all(13),
                       // shape: CircleBorder(),
-                      child: Padding(
-                        padding: const EdgeInsets.all(13),
+                      child: const Padding(
+                        padding: EdgeInsets.all(13),
                         child: Icon(Icons.arrow_forward, color: white),
                       ),
                     ),
                   )
                 ],
               ),
-              height: 245,
-              width: double.infinity,
-              decoration: authPlateDecoration,
             ),
           ],
         ));

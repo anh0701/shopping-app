@@ -9,7 +9,7 @@ import '../shared/partials.dart';
 class Dashboard extends StatefulWidget {
   final String pageTitle;
 
-  Dashboard({Key? key, required this.pageTitle}) : super(key: key);
+  const Dashboard({Key? key, required this.pageTitle}) : super(key: key);
 
   @override
   _DashboardState createState() => _DashboardState();
@@ -22,10 +22,10 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     final _tabs = [
       storeTab(context),
-      Text('Tab2'),
-      Text('Tab3'),
-      Text('Tab4'),
-      Text('Tab5'),
+      const Text('Tab2'),
+      const Text('Tab3'),
+      const Text('Tab4'),
+      const Text('Tab5'),
     ];
 
     return Scaffold(
@@ -36,35 +36,35 @@ class _DashboardState extends State<Dashboard> {
           leading: IconButton(
             onPressed: () {},
             iconSize: 21,
-            icon: Icon(Fryo.funnel),
+            icon: const Icon(Fryo.funnel),
           ),
           backgroundColor: primaryColor,
           title:
-              Text('Store', style: logoWhiteStyle, textAlign: TextAlign.center),
+              const Text('Store', style: logoWhiteStyle, textAlign: TextAlign.center),
           actions: <Widget>[
             IconButton(
-              padding: EdgeInsets.all(0),
+              padding: const EdgeInsets.all(0),
               onPressed: () {},
               iconSize: 21,
-              icon: Icon(Fryo.magnifier),
+              icon: const Icon(Fryo.magnifier),
             ),
             IconButton(
-              padding: EdgeInsets.all(0),
+              padding: const EdgeInsets.all(0),
               onPressed: () {},
               iconSize: 21,
-              icon: Icon(Fryo.alarm),
+              icon: const Icon(Fryo.alarm),
             )
           ],
         ),
         body: _tabs[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Fryo.shop), label: 'Store'),
-            BottomNavigationBarItem(icon: Icon(Fryo.cart), label: 'My Cart'),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(icon: Icon(Fryo.shop), label: 'Store'),
+            const BottomNavigationBarItem(icon: Icon(Fryo.cart), label: 'My Cart'),
+            const BottomNavigationBarItem(
                 icon: Icon(Fryo.heart_1), label: 'Favourites'),
-            BottomNavigationBarItem(icon: Icon(Fryo.user_1), label: 'Profile'),
-            BottomNavigationBarItem(icon: Icon(Fryo.cog_1), label: 'Settings')
+            const BottomNavigationBarItem(icon: Icon(Fryo.user_1), label: 'Profile'),
+            const BottomNavigationBarItem(icon: Icon(Fryo.cog_1), label: 'Settings')
           ],
           currentIndex: _selectedIndex,
           type: BottomNavigationBarType.fixed,
@@ -146,7 +146,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: foods[0],
                 pageTitle: '',
               );
@@ -159,7 +159,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: foods[1],
                 pageTitle: '',
               );
@@ -172,7 +172,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: foods[2],
                 pageTitle: '',
               );
@@ -185,7 +185,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: foods[3],
                 pageTitle: '',
               );
@@ -200,7 +200,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: drinks[0],
                 pageTitle: '',
               );
@@ -213,7 +213,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: drinks[1],
                 pageTitle: '',
               );
@@ -226,7 +226,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: drinks[2],
                 pageTitle: '',
               );
@@ -239,7 +239,7 @@ Widget storeTab(BuildContext context) {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return new ProductPage(
+              return ProductPage(
                 productData: drinks[3],
                 pageTitle: '',
               );
@@ -257,14 +257,14 @@ Widget sectionHeader(String headerTitle, {onViewMore}) {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
       Container(
-        margin: EdgeInsets.only(left: 15, top: 10),
+        margin: const EdgeInsets.only(left: 15, top: 10),
         child: Text(headerTitle, style: h4),
       ),
       Container(
-        margin: EdgeInsets.only(left: 15, top: 2),
+        margin: const EdgeInsets.only(left: 15, top: 2),
         child: TextButton(
           onPressed: onViewMore,
-          child: Text('View all ›', style: contrastText),
+          child: const Text('View all ›', style: contrastText),
         ),
       )
     ],
@@ -298,17 +298,17 @@ Widget headerTopCategories() {
 
 Widget headerCategoryItem(String name, IconData icon, {onPressed}) {
   return Container(
-    margin: EdgeInsets.only(left: 15),
+    margin: const EdgeInsets.only(left: 15),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
-            margin: EdgeInsets.only(bottom: 10),
+            margin: const EdgeInsets.only(bottom: 10),
             width: 86,
             height: 86,
             child: FloatingActionButton(
-              shape: CircleBorder(),
+              shape: const CircleBorder(),
               heroTag: name,
               onPressed: onPressed,
               backgroundColor: white,
@@ -322,7 +322,7 @@ Widget headerCategoryItem(String name, IconData icon, {onPressed}) {
 
 Widget deals(String dealTitle, {onViewMore, required List<Widget> items}) {
   return Container(
-    margin: EdgeInsets.only(top: 5),
+    margin: const EdgeInsets.only(top: 5),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -332,12 +332,13 @@ Widget deals(String dealTitle, {onViewMore, required List<Widget> items}) {
           height: 250,
           child: ListView(
             scrollDirection: Axis.horizontal,
+            // ignore: unnecessary_null_comparison
             children: (items != null)
                 ? items
                 : <Widget>[
                     Container(
-                      margin: EdgeInsets.only(left: 15),
-                      child: Text('No items available at this moment.',
+                      margin: const EdgeInsets.only(left: 15),
+                      child: const Text('No items available at this moment.',
                           style: taglineText),
                     )
                   ],

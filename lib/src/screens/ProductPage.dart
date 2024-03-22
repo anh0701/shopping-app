@@ -11,7 +11,7 @@ class ProductPage extends StatefulWidget {
   final String pageTitle;
   final Product productData;
 
-  ProductPage({Key? key, required this.pageTitle, required this.productData})
+  const ProductPage({Key? key, required this.pageTitle, required this.productData})
       : super(key: key);
 
   @override
@@ -19,7 +19,6 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
-  double _rating = 4;
   int _quantity = 1;
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class _ProductPageState extends State<ProductPage> {
           elevation: 0,
           backgroundColor: bgColor,
           centerTitle: true,
-          leading: BackButton(
+          leading: const BackButton(
             color: darkText,
           ),
           title: Text(widget.productData.name, style: h4),
@@ -37,16 +36,25 @@ class _ProductPageState extends State<ProductPage> {
         body: ListView(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               child: Center(
                 child: Stack(
                   children: <Widget>[
                     Align(
                       alignment: Alignment.center,
                       child: Container(
-                        margin: EdgeInsets.only(top: 100, bottom: 100),
-                        padding: EdgeInsets.only(top: 100, bottom: 50),
+                        margin: const EdgeInsets.only(top: 100, bottom: 100),
+                        padding: const EdgeInsets.only(top: 100, bottom: 50),
                         width: MediaQuery.of(context).size.width * 0.85,
+                        decoration: BoxDecoration(
+                            color: white,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                  blurRadius: 15,
+                                  spreadRadius: 5,
+                                  color: Color.fromRGBO(0, 0, 0, .05))
+                            ]),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -62,8 +70,8 @@ class _ProductPageState extends State<ProductPage> {
                                   direction: Axis.horizontal,
                                   itemCount: 5,
                                   itemPadding:
-                                      EdgeInsets.symmetric(horizontal: 4.0),
-                                  itemBuilder: (context, _) => Icon(
+                                      const EdgeInsets.symmetric(horizontal: 4.0),
+                                  itemBuilder: (context, _) => const Icon(
                                     Icons.star,
                                     color: Colors.green,
                                   ),
@@ -90,12 +98,12 @@ class _ProductPageState extends State<ProductPage> {
                             //   ),
                             // ),
                             Container(
-                              margin: EdgeInsets.only(top: 10, bottom: 25),
+                              margin: const EdgeInsets.only(top: 10, bottom: 25),
                               child: Column(
                                 children: <Widget>[
                                   Container(
-                                    child: Text('Quantity', style: h6),
-                                    margin: EdgeInsets.only(bottom: 15),
+                                    margin: const EdgeInsets.only(bottom: 15),
+                                    child: const Text('Quantity', style: h6),
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -110,11 +118,11 @@ class _ProductPageState extends State<ProductPage> {
                                               _quantity += 1;
                                             });
                                           },
-                                          child: Icon(Icons.add),
+                                          child: const Icon(Icons.add),
                                         ),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(
+                                        margin: const EdgeInsets.only(
                                             left: 20, right: 20),
                                         child: Text(_quantity.toString(),
                                             style: h3),
@@ -128,7 +136,7 @@ class _ProductPageState extends State<ProductPage> {
                                               _quantity -= 1;
                                             });
                                           },
-                                          child: Icon(Icons.remove),
+                                          child: const Icon(Icons.remove),
                                         ),
                                       )
                                     ],
@@ -136,25 +144,16 @@ class _ProductPageState extends State<ProductPage> {
                                 ],
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               width: 180,
                               child: OutlineBtn('Buy Now', () {}),
                             ),
-                            Container(
+                            SizedBox(
                               width: 180,
                               child: FlatBtn('Add to Cart', () {}),
                             )
                           ],
                         ),
-                        decoration: BoxDecoration(
-                            color: white,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                  blurRadius: 15,
-                                  spreadRadius: 5,
-                                  color: Color.fromRGBO(0, 0, 0, .05))
-                            ]),
                       ),
                     ),
                     Align(
