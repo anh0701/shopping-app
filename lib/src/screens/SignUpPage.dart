@@ -54,10 +54,10 @@ class _SignUpPageState extends State<SignUpPage> {
                     children: <Widget>[
                       Text('Welcome to Fryo!', style: h3),
                       Text('Let\'s get started', style: taglineText),
-                      fryoTextInput('Username'),
-                      fryoTextInput('Full Name'),
-                      fryoEmailInput('Email Address'),
-                      fryoPasswordInput('Password')
+                      TextInput('Username'),
+                      TextInput('Full Name'),
+                      EmailInput('Email Address'),
+                      PasswordInput('Password')
                     ],
                   ),
                   Positioned(

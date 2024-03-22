@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
   ];
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fryo',
+      title: 'shoppingapp',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),

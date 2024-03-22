@@ -103,8 +103,7 @@ class _ProductPageState extends State<ProductPage> {
                                         CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Container(
-                                        width: 55,
-                                        height: 55,
+                                        alignment: Alignment.center,
                                         child: OutlinedButton(
                                           onPressed: () {
                                             setState(() {
@@ -121,8 +120,7 @@ class _ProductPageState extends State<ProductPage> {
                                             style: h3),
                                       ),
                                       Container(
-                                        width: 55,
-                                        height: 55,
+                                        alignment: Alignment.center,
                                         child: OutlinedButton(
                                           onPressed: () {
                                             setState(() {
@@ -140,11 +138,11 @@ class _ProductPageState extends State<ProductPage> {
                             ),
                             Container(
                               width: 180,
-                              child:   OutlineBtn('Buy Now', () {}),
+                              child: OutlineBtn('Buy Now', () {}),
                             ),
                             Container(
                               width: 180,
-                              child:   FlatBtn('Add to Cart', () {}),
+                              child: FlatBtn('Add to Cart', () {}),
                             )
                           ],
                         ),

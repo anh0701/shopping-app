@@ -3,6 +3,7 @@ import './colors.dart';
 
 TextButton FlatBtn(String text, onPressed) {
   return TextButton(
+    style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(primaryColor)),
       onPressed: onPressed,
       child: Text(
         text,

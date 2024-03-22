@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './colors.dart';
 import './styles.dart';
 
-Container fryoTextInput(String hintText,
+Container TextInput(String hintText,
     {onTap, onChanged, onEditingComplete, onSubmitted}) {
   return Container(
     margin: EdgeInsets.only(top: 13),
@@ -23,7 +23,7 @@ Container fryoTextInput(String hintText,
   );
 }
 
-Container fryoEmailInput(String hintText,
+Container EmailInput(String hintText,
     {onTap, onChanged, onEditingComplete, onSubmitted}) {
   return Container(
     margin: EdgeInsets.only(top: 13),
@@ -46,7 +46,7 @@ Container fryoEmailInput(String hintText,
 }
 
 
-Container fryoPasswordInput(String hintText,
+Container PasswordInput(String hintText,
     {onTap, onChanged, onEditingComplete, onSubmitted}) {
   return Container(
     margin: EdgeInsets.only(top: 13),

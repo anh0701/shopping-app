@@ -54,8 +54,8 @@ class _SignInPageState extends State<SignInPage> {
                     children: <Widget>[
                       Text('Welcome Back!', style: h3),
                       Text('Howdy, let\'s authenticate', style: taglineText),
-                      fryoTextInput('Username'),
-                      fryoPasswordInput('Password'),
+                      TextInput('Username'),
+                      PasswordInput('Password'),
                       TextButton(
                         onPressed: () {},
                         child:
