@@ -112,24 +112,7 @@ class _ProductPageState extends State<ProductPage> {
                                     children: <Widget>[
                                       Container(
                                         alignment: Alignment.center,
-                                        child: OutlinedButton(
-                                          onPressed: () {
-                                            setState(() {
-                                              _quantity += 1;
-                                            });
-                                          },
-                                          child: const Icon(Icons.add),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin: const EdgeInsets.only(
-                                            left: 20, right: 20),
-                                        child: Text(_quantity.toString(),
-                                            style: h3),
-                                      ),
-                                      Container(
-                                        alignment: Alignment.center,
-                                        child: OutlinedButton(
+                                        child: TextButton(
                                           onPressed: () {
                                             setState(() {
                                               if (_quantity == 1) return;
@@ -138,9 +121,29 @@ class _ProductPageState extends State<ProductPage> {
                                           },
                                           child: const Icon(Icons.remove),
                                         ),
-                                      )
+                                      ),
+                                      Container(
+                                        // decoration: BoxDecoration(
+                                        //   borderRadius: BorderRadius.circular(20)
+                                        // ),
+                                        margin: const EdgeInsets.only(
+                                            left: 20, right: 20),
+                                        child: Text(_quantity.toString(),
+                                            style: h3),
+                                      ),
+                                      Container(
+                                        alignment: Alignment.center,
+                                        child: TextButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              _quantity += 1;
+                                            });
+                                          },
+                                          child: const Icon(Icons.add),
+                                        ),
+                                      ),
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
